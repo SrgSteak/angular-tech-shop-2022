@@ -1,1 +1,7 @@
 /* Add application styles & imports to this file! */
+* {
+    box-sizing: border-box;
+    font-family: Avenir, Helvetica, sans-serif;
+    color: white;
+    background-color: teal;
+}
