@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from './services/search.service';
 
 @Component({
   selector: 'app-searchpage',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./searchpage.component.css']
 })
 export class SearchpageComponent implements OnInit {
+  protected results = [];
 
-  constructor() { }
+  constructor(private searchService: SearchService) { }
 
   ngOnInit(): void {
+  }
+
+  updateResults(searchstring: string) {
+    this.results = this.searchService.findResults(searchstring);
   }
 
 }

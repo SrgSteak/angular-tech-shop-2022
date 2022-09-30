@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-resultlist',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resultlist.component.css']
 })
 export class ResultlistComponent implements OnInit {
+
+  @Input('results') results: Array<string>;
 
   constructor() { }
 
