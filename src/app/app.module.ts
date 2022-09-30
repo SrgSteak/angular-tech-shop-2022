@@ -17,7 +17,7 @@ import { RouterModule } from '@angular/router';
     {
       path: '',
       pathMatch: 'full',
-      component: StartpageComponent
+      loadChildren: () => import('./startpage/startpage.module').then(m => m.StartpageModule)
     },
     {
       path: 'about',
@@ -32,7 +32,7 @@ import { RouterModule } from '@angular/router';
       redirectTo: ''
     }
   ]) ],
-  declarations: [ AppComponent, HelloComponent, StartpageComponent, AboutpageComponent, SearchpageComponent, SearchformComponent, ResultlistComponent, ResultitemComponent ],
+  declarations: [ AppComponent, HelloComponent, AboutpageComponent, SearchpageComponent, SearchformComponent, ResultlistComponent, ResultitemComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
