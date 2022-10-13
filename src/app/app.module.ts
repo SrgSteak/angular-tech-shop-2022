@@ -21,6 +21,10 @@ import { RouterModule } from '@angular/router';
       loadChildren: () => import('./searchpage/searchpage.module').then(m => m.SearchpageModule)
     },
     {
+      path: 'convoluted-neural-network',
+      loadComponent: () => import('./mnist-number-magic/mnist-number-magic.component').then(c => c.MnistNumberMagicComponent)
+    },
+    {
       path: '*',
       redirectTo: ''
     }

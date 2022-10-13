@@ -1,0 +1,39 @@
+:host {
+    margin-top: 2rem;
+    display: block;
+}
+
+canvas {
+    border: 1px solid white;
+}
+
+#draw {
+    height: 200;
+    width: 200;
+}
+
+#image {
+    height: 28;
+    width: 28;
+}
+
+.barChart {
+    border: 1px solid white;
+    height: 100px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    .bar {
+        width: 1rem;
+        background-color: white !important;
+        height: 100%;
+        color: teal !important;
+        text-align: center;
+        transition: all 1s ease-in-out;
+    }
+}
