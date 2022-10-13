@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -15,7 +14,7 @@ import { RouterModule } from '@angular/router';
     },
     {
       path: 'about',
-      component: AboutpageComponent
+      loadComponent: () => import('./aboutpage/aboutpage.component').then(c => c.AboutpageComponent)
     },
     {
       path: 'search',
@@ -26,7 +25,7 @@ import { RouterModule } from '@angular/router';
       redirectTo: ''
     }
   ]) ],
-  declarations: [ AppComponent, HelloComponent, AboutpageComponent ],
+  declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
