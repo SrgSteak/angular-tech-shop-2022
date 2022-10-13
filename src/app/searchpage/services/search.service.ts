@@ -15,7 +15,6 @@ export class SearchService {
   constructor(private fb: FormBuilder) { }
 
   findResults(searchstring: string): Array<string> {
-    console.log(this.data.filter(pred => pred.toLocaleLowerCase().includes(searchstring.toLocaleLowerCase())));
     return this.data.filter(pred => pred.toLocaleLowerCase().includes(searchstring.toLocaleLowerCase()));
   }
 }
